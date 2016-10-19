@@ -1,12 +1,36 @@
-$('#btnVerify').on('click', verify);
+// DOM Ready =============================================================
+$(document).ready(function() {
+    console.log('O mundo ainda faz sentido');
+    //$.ajax({
+    //  type: 'POST',
+    //  data: 'afjkldsfjflkfjds',
+    //  url: '/',
+    //  dataType: 'JSON'
+    //})
+    // Add User button click
+    $('#btnVerify').on('click',showUserInfo );
+});
 
-funtion verify(event){
-  var word = $('input#inputWord').val()
+//$('#btnVerify').on('click', verify);
+
+function showUserInfo(event) {
+  console.log('o mindo');
   $.ajax({
     type: 'POST',
-    data: word,
+    data: 'afjkldsfjflkfjds',
     url: '/',
     dataType: 'JSON'
-  })
-  console.log(word)
-}
+  });
+};
+
+//funtion verify(event) {
+  //console.log('o mundo continua');
+  //var word = $('input#inputWord').val()
+//  $.ajax({
+//    type: 'POST',
+//    data: 'afjkldsfjflkfjds',
+//    url: '/',
+//    dataType: 'JSON'
+//  });
+//  console.log(word)
+//};
